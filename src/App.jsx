@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { HowItWorks } from './pages/HowItWorks';
+import { Contact } from './pages/Contact';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Route path="/careers" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Careers</h1><p className="text-gray-600">Coming soon...</p></div>} />
             <Route path="/press" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Press</h1><p className="text-gray-600">Coming soon...</p></div>} />
             <Route path="/community" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Community</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/contact" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Contact</h1><p className="text-gray-600">Coming soon...</p></div>} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/trust" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Trust & Safety</h1><p className="text-gray-600">Coming soon...</p></div>} />
             <Route path="/privacy" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Privacy Policy</h1><p className="text-gray-600">Coming soon...</p></div>} />
             <Route path="/terms" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Terms of Service</h1><p className="text-gray-600">Coming soon...</p></div>} />
