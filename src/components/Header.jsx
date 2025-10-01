@@ -47,6 +47,11 @@ export function Header() {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <Link to="/list-item">
+              <Button variant="primary" size="sm" className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800">
+                List Your Item
+              </Button>
+            </Link>
             <Link to="/login">
               <Button variant="outline" size="sm">
                 Log In
@@ -91,6 +96,11 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4 space-y-3 border-t border-gray-200">
+                <Link to="/list-item" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="primary" size="sm" className="w-full bg-gradient-to-r from-primary-600 to-primary-700">
+                    List Your Item
+                  </Button>
+                </Link>
                 <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                   <Button variant="outline" size="sm" className="w-full">
                     Log In

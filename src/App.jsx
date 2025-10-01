@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { HowItWorks } from './pages/HowItWorks';
 import { Contact } from './pages/Contact';
+import { ListItem } from './pages/ListItem';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/list-item" element={<ListItem />} />
             <Route path="/browse" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Browse Items</h1><p className="text-gray-600">Coming soon...</p></div>} />
             <Route path="/safety" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Safety</h1><p className="text-gray-600">Coming soon...</p></div>} />
             <Route path="/help" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Help Center</h1><p className="text-gray-600">Coming soon...</p></div>} />
