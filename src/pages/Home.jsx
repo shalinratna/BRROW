@@ -257,32 +257,6 @@ export function Home() {
         </div>
       </div>
 
-      {/* Be the First to Know - Waitlist Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Be the First to Know
-              </h2>
-              <p className="text-xl text-gray-600">
-                Join 9,000+ people on the waitlist. Get $50 in free rental credits at launch.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <WaitlistForm source="homepage" />
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Preview Browse */}
       <div className="py-20 bg-white">
         <div className="container-custom">
@@ -310,6 +284,32 @@ export function Home() {
             <p className="text-sm text-gray-500 mt-4">
               * Actual inventory available at launch
             </p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Be the First to Know - Waitlist Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Be the First to Know
+              </h2>
+              <p className="text-xl text-gray-600">
+                Join 9,000+ people on the waitlist. Get $50 in free rental credits at launch.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <WaitlistForm source="homepage" />
+            </div>
           </motion.div>
         </div>
       </div>

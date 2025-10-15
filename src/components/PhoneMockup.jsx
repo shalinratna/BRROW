@@ -8,14 +8,20 @@ export function PhoneMockup({ children, className = '' }) {
         {/* Phone Body */}
         <div className="absolute inset-0 bg-gray-900 rounded-[3rem] shadow-2xl">
           {/* Screen */}
-          <div className="absolute inset-3 bg-white rounded-[2.5rem] overflow-hidden">
+          <div className="absolute inset-3 bg-black rounded-[2.5rem] overflow-hidden">
             {/* Notch */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-3xl z-10"></div>
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-3xl z-20"></div>
 
             {/* Content */}
-            <div className="h-full w-full pt-8 pb-4">
+            <div className="h-full w-full relative">
               {children}
             </div>
+
+            {/* Screen Overlay - Subtle Glare Effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none z-10"></div>
+
+            {/* Screen Reflection */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/3 to-transparent pointer-events-none z-10"></div>
           </div>
 
           {/* Volume Buttons */}
