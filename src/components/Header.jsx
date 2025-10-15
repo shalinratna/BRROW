@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, UserCircleIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, BellAlertIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import { Button } from './Button';
 
 export function Header() {
@@ -22,9 +22,11 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
+            <img
+              src="/brrow-logo.png"
+              alt="Brrow Logo"
+              className="w-12 h-12"
+            />
             <span className="text-2xl font-bold text-gray-900">Brrow</span>
           </Link>
 
@@ -45,21 +47,22 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Desktop CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
             <Link to="/list-item">
-              <Button variant="primary" size="sm" className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800">
-                List Your Item
+              <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <RocketLaunchIcon className="w-4 h-4" />
+                List for Launch
               </Button>
             </Link>
-            <Link to="/login">
-              <Button variant="outline" size="sm">
-                Log In
-              </Button>
-            </Link>
-            <Link to="/signup">
-              <Button size="sm">
-                Sign Up
+            <Link to="/waitlist">
+              <Button
+                variant="primary"
+                size="sm"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 flex items-center gap-2 shadow-lg"
+              >
+                <BellAlertIcon className="w-4 h-4" />
+                Join Waitlist
               </Button>
             </Link>
           </div>
@@ -96,19 +99,20 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4 space-y-3 border-t border-gray-200">
+                <Link to="/waitlist" onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    className="w-full bg-gradient-to-r from-primary-600 to-primary-700 flex items-center justify-center gap-2"
+                  >
+                    <BellAlertIcon className="w-5 h-5" />
+                    Join Waitlist
+                  </Button>
+                </Link>
                 <Link to="/list-item" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="primary" size="sm" className="w-full bg-gradient-to-r from-primary-600 to-primary-700">
-                    List Your Item
-                  </Button>
-                </Link>
-                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="outline" size="sm" className="w-full">
-                    Log In
-                  </Button>
-                </Link>
-                <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
-                  <Button size="sm" className="w-full">
-                    Sign Up
+                  <Button variant="outline" size="sm" className="w-full flex items-center justify-center gap-2">
+                    <RocketLaunchIcon className="w-5 h-5" />
+                    List for Launch
                   </Button>
                 </Link>
               </div>

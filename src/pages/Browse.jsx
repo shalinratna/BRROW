@@ -7,6 +7,8 @@ import {
   MapPinIcon,
   StarIcon,
   HeartIcon,
+  RocketLaunchIcon,
+  BellAlertIcon,
 } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 
@@ -230,6 +232,34 @@ export function Browse() {
         </div>
       </div>
 
+      {/* App Launch Banner */}
+      <div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-white py-4">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col md:flex-row items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-3">
+              <RocketLaunchIcon className="w-6 h-6" />
+              <div>
+                <span className="font-bold text-lg">App Preview - Launching Q1 2026</span>
+                <p className="text-sm text-white/90">
+                  This is a preview catalog. Full inventory available in the mobile app at launch.
+                </p>
+              </div>
+            </div>
+            <Link to="/waitlist">
+              <button className="flex items-center gap-2 px-6 py-3 bg-white text-orange-600 rounded-lg font-bold hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg whitespace-nowrap">
+                <BellAlertIcon className="w-5 h-5" />
+                Join Waitlist
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+
       <div className="container-custom py-8">
         {/* Search & Filter Bar */}
         <motion.div
@@ -414,7 +444,7 @@ export function Browse() {
           </div>
         )}
 
-        {/* Call to Action */}
+        {/* Call to Action - App Launch Focus */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -422,22 +452,27 @@ export function Browse() {
           transition={{ duration: 0.6 }}
           className="mt-16 bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-12 text-center text-white"
         >
-          <h2 className="text-3xl font-bold mb-4">Don't see what you're looking for?</h2>
+          <RocketLaunchIcon className="w-16 h-16 mx-auto mb-6 text-primary-200" />
+          <h2 className="text-3xl font-bold mb-4">Ready to Rent or Earn?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Post a request and let lenders come to you, or list your own items to earn money!
+            Join the waitlist now and get <span className="font-bold text-white">$50 in free rental credits</span> when our mobile app launches in Q1 2026!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/list-item">
-              <button className="px-8 py-4 bg-white text-primary-600 rounded-xl font-bold hover:bg-gray-100 transition-all">
-                List Your Items
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/waitlist" className="flex-1 sm:flex-initial">
+              <button className="w-full px-10 py-4 bg-white text-primary-600 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2">
+                <BellAlertIcon className="w-6 h-6" />
+                Join Waitlist
               </button>
             </Link>
-            <Link to="/contact">
-              <button className="px-8 py-4 bg-primary-800 text-white rounded-xl font-bold hover:bg-primary-900 transition-all">
-                Request an Item
+            <Link to="/list-item" className="flex-1 sm:flex-initial">
+              <button className="w-full px-10 py-4 bg-primary-800 text-white rounded-xl font-bold text-lg border-2 border-primary-600 hover:bg-primary-900 transform hover:scale-105 transition-all">
+                List for Launch
               </button>
             </Link>
           </div>
+          <p className="mt-6 text-sm text-primary-200">
+            9,237 people already on the waitlist • iOS & Android
+          </p>
         </motion.div>
       </div>
     </div>

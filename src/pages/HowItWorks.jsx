@@ -96,8 +96,67 @@ export function HowItWorks() {
                   </ul>
                 </div>
                 <div className="flex-1">
-                  <div className="w-full h-64 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center">
-                    <span className="text-primary-600 font-semibold">Step {index + 1} Illustration</span>
+                  <div className="w-full h-64 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center p-8">
+                    {index === 0 && (
+                      // Step 1: Create Profile - Person with checkmark
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        <circle cx="100" cy="70" r="30" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="100" cy="70" r="22" fill="#2563eb"/>
+                        <path d="M100 92 Q70 92 60 110 L60 140 Q60 150 70 150 L130 150 Q140 150 140 140 L140 110 Q130 92 100 92Z" fill="#2563eb" opacity="0.2"/>
+                        <path d="M100 95 Q75 95 67 110 L67 135 Q67 142 73 142 L127 142 Q133 142 133 135 L133 110 Q125 95 100 95Z" fill="#2563eb"/>
+                        <circle cx="140" cy="140" r="25" fill="#10b981" opacity="0.9"/>
+                        <path d="M130 140 L137 147 L152 132" stroke="white" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
+                    {index === 1 && (
+                      // Step 2: List or Browse - Phone with items
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        <rect x="60" y="20" width="80" height="160" rx="10" fill="#2563eb" opacity="0.2"/>
+                        <rect x="65" y="25" width="70" height="150" rx="8" fill="white"/>
+                        <rect x="65" y="30" width="70" height="8" rx="4" fill="#2563eb" opacity="0.3"/>
+                        <rect x="75" y="50" width="25" height="25" rx="4" fill="#10b981" opacity="0.3"/>
+                        <rect x="105" y="50" width="25" height="25" rx="4" fill="#2563eb" opacity="0.3"/>
+                        <rect x="75" y="80" width="25" height="25" rx="4" fill="#2563eb" opacity="0.5"/>
+                        <rect x="105" y="80" width="25" height="25" rx="4" fill="#10b981" opacity="0.5"/>
+                        <rect x="75" y="110" width="50" height="4" rx="2" fill="#2563eb" opacity="0.3"/>
+                        <rect x="75" y="118" width="50" height="4" rx="2" fill="#2563eb" opacity="0.3"/>
+                        <circle cx="100" cy="160" r="8" fill="#2563eb" opacity="0.3"/>
+                        <circle cx="155" cy="60" r="20" fill="#10b981"/>
+                        <text x="155" y="70" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">+</text>
+                      </svg>
+                    )}
+                    {index === 2 && (
+                      // Step 3: Connect Safely - Two people with messages
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        <circle cx="60" cy="70" r="20" fill="#2563eb" opacity="0.3"/>
+                        <circle cx="60" cy="70" r="15" fill="#2563eb"/>
+                        <path d="M60 85 Q45 85 40 95 L40 115 Q40 120 45 120 L75 120 Q80 120 80 115 L80 95 Q75 85 60 85Z" fill="#2563eb" opacity="0.3"/>
+                        <circle cx="140" cy="70" r="20" fill="#10b981" opacity="0.3"/>
+                        <circle cx="140" cy="70" r="15" fill="#10b981"/>
+                        <path d="M140 85 Q125 85 120 95 L120 115 Q120 120 125 120 L155 120 Q160 120 160 115 L160 95 Q155 85 140 85Z" fill="#10b981" opacity="0.3"/>
+                        <rect x="30" y="135" width="50" height="35" rx="8" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="38" cy="143" r="3" fill="#2563eb"/>
+                        <circle cx="45" cy="143" r="3" fill="#2563eb"/>
+                        <circle cx="52" cy="143" r="3" fill="#2563eb"/>
+                        <rect x="120" y="145" width="50" height="35" rx="8" fill="#10b981" opacity="0.2"/>
+                        <rect x="128" y="153" width="34" height="3" rx="1.5" fill="#10b981" opacity="0.6"/>
+                        <rect x="128" y="160" width="28" height="3" rx="1.5" fill="#10b981" opacity="0.6"/>
+                        <rect x="128" y="167" width="30" height="3" rx="1.5" fill="#10b981" opacity="0.6"/>
+                      </svg>
+                    )}
+                    {index === 3 && (
+                      // Step 4: Exchange & Enjoy - Handshake with star
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        <path d="M50 100 L70 100 L80 90 L90 100 L100 90 L110 100 L120 90 L130 100 L150 100" stroke="#2563eb" strokeWidth="8" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+                        <path d="M55 100 L75 100 L85 92 L95 100 L100 95 L105 100 L115 92 L125 100 L145 100" stroke="#2563eb" strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                        <rect x="40" y="100" width="20" height="40" rx="4" fill="#2563eb" opacity="0.3"/>
+                        <rect x="140" y="100" width="20" height="40" rx="4" fill="#10b981" opacity="0.3"/>
+                        <circle cx="100" cy="60" r="30" fill="#fbbf24" opacity="0.2"/>
+                        <path d="M100 35 L105 50 L120 52 L110 62 L113 77 L100 69 L87 77 L90 62 L80 52 L95 50 Z" fill="#fbbf24"/>
+                        <circle cx="145" cy="145" r="15" fill="#10b981" opacity="0.2"/>
+                        <path d="M140 145 L145 150 L152 143" stroke="#10b981" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
                   </div>
                 </div>
               </motion.div>

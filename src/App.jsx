@@ -7,6 +7,17 @@ import { Contact } from './pages/Contact';
 import { ListItem } from './pages/ListItem';
 import { Feedback } from './pages/Feedback';
 import { Browse } from './pages/Browse';
+import { Waitlist } from './pages/Waitlist';
+import { Help } from './pages/Help';
+import { About } from './pages/About';
+import { Collaborate } from './pages/Collaborate';
+import { Press } from './pages/Press';
+import { Community } from './pages/Community';
+import { Safety } from './pages/Safety';
+import { TrustSafety } from './pages/TrustSafety';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
+import { Cookies } from './pages/Cookies';
 
 function App() {
   return (
@@ -19,20 +30,19 @@ function App() {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/list-item" element={<ListItem />} />
             <Route path="/browse" element={<Browse />} />
-            <Route path="/safety" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Safety</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/help" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Help Center</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/login" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Login</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/signup" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Sign Up</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/about" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">About</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/careers" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Careers</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/press" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Press</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/community" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Community</h1><p className="text-gray-600">Coming soon...</p></div>} />
+            <Route path="/waitlist" element={<Waitlist />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/safety" element={<Safety />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/collaborate" element={<Collaborate />} />
+            <Route path="/press" element={<Press />} />
+            <Route path="/community" element={<Community />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/feedback" element={<Feedback />} />
-            <Route path="/trust" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Trust & Safety</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/privacy" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Privacy Policy</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/terms" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Terms of Service</h1><p className="text-gray-600">Coming soon...</p></div>} />
-            <Route path="/cookies" element={<div className="section-padding container-custom text-center"><h1 className="text-4xl font-bold mb-4">Cookie Policy</h1><p className="text-gray-600">Coming soon...</p></div>} />
+            <Route path="/trust" element={<TrustSafety />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
           </Routes>
         </main>
         <Footer />

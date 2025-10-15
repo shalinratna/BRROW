@@ -7,7 +7,8 @@ import {
   MapPinIcon,
   ExclamationTriangleIcon,
   CheckCircleIcon,
-  InformationCircleIcon
+  InformationCircleIcon,
+  RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
 export function ListItem() {
@@ -148,13 +149,20 @@ export function ListItem() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full mb-4">
+            <RocketLaunchIcon className="w-5 h-5 text-primary-600" />
+            <span className="text-sm font-semibold text-primary-700">
+              List Now for Q1 2026 Launch
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gray-900">List Your Item on </span>
+            <span className="text-gray-900">Be Ready When </span>
             <span className="gradient-text">Brrow</span>
+            <span className="text-gray-900"> Launches</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Turn your idle items into income. List what you own and start earning today.
-            It's free to list, and you set your own prices!
+            Submit your items now and be among the first lenders when the app goes live.
+            Early listers get featured placement and verified badges!
           </p>
         </motion.div>
 
@@ -168,10 +176,10 @@ export function ListItem() {
             <div className="flex items-center">
               <CheckCircleIcon className="w-6 h-6 text-green-600 mr-3" />
               <div>
-                <span className="text-green-800 font-semibold text-lg block">Listing Submitted Successfully!</span>
+                <span className="text-green-800 font-semibold text-lg block">You're on the Launch List!</span>
                 <p className="text-green-700 text-sm mt-1">
-                  We've received your item listing. Our team will review it and get back to you within 24 hours.
-                  You'll receive a confirmation email shortly.
+                  Your item has been submitted for our Q1 2026 launch. We'll review it and notify you when
+                  your listing goes live on the app. You'll get priority placement as an early lister!
                 </p>
               </div>
             </div>
@@ -196,18 +204,19 @@ export function ListItem() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8 p-6 bg-blue-50 border border-blue-200 rounded-xl"
+          className="mb-8 p-6 bg-gradient-to-r from-primary-50 to-blue-50 border border-primary-200 rounded-xl"
         >
           <div className="flex items-start">
-            <InformationCircleIcon className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+            <RocketLaunchIcon className="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-semibold text-blue-900 mb-2">Before you list:</h3>
-              <ul className="text-sm text-blue-800 space-y-1">
-                <li>• Make sure your item is in good working condition</li>
+              <h3 className="font-semibold text-primary-900 mb-2">Get Ready for Launch (Q1 2026):</h3>
+              <ul className="text-sm text-primary-800 space-y-1">
+                <li>• Submit your items now for priority placement when we launch</li>
+                <li>• Early listers get verified badges and featured listings</li>
                 <li>• Take clear, well-lit photos from multiple angles</li>
                 <li>• Set competitive prices based on similar items</li>
-                <li>• Be honest about the item's condition and any flaws</li>
-                <li>• You'll earn 80% of each rental (Brrow takes 20%)</li>
+                <li>• You'll earn 95% of each transaction (Brrow takes only 5%)</li>
+                <li>• Your listings go live on iOS & Android simultaneously</li>
               </ul>
             </div>
           </div>
@@ -578,15 +587,18 @@ export function ListItem() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white py-4 px-6 rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white py-4 px-6 rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
-                  <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Submitting Listing...
-                  </div>
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    Submitting for Launch...
+                  </>
                 ) : (
-                  'Submit Listing for Review'
+                  <>
+                    <RocketLaunchIcon className="w-5 h-5" />
+                    List for Q1 2026 Launch
+                  </>
                 )}
               </button>
 
@@ -607,15 +619,15 @@ export function ListItem() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-12 bg-white rounded-xl p-8"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">What Happens Next?</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Your Launch Timeline</h3>
+          <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary-600">1</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Review</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Submit Now</h4>
               <p className="text-sm text-gray-600">
-                Our team reviews your listing within 24 hours to ensure quality and safety standards.
+                Fill out the form and submit your item details for launch.
               </p>
             </div>
 
@@ -623,21 +635,37 @@ export function ListItem() {
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary-600">2</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Approval</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Review</h4>
               <p className="text-sm text-gray-600">
-                Once approved, your item goes live on Brrow and starts appearing in search results.
+                We review your listing and prepare it for the app launch.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">3</span>
+                <RocketLaunchIcon className="w-8 h-8 text-primary-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Earn</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Launch Q1 2026</h4>
               <p className="text-sm text-gray-600">
-                Start receiving rental requests and earn money from your idle items!
+                Your listing goes live when the app launches on iOS & Android.
               </p>
             </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary-600">💰</span>
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Start Earning</h4>
+              <p className="text-sm text-gray-600">
+                Get rental requests and earn money as an early lister!
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl text-center">
+            <p className="text-sm font-semibold text-gray-800">
+              ⭐ Early Lister Bonus: Get a <span className="text-primary-600">Verified Badge</span> and <span className="text-primary-600">Featured Placement</span> when we launch!
+            </p>
           </div>
         </motion.div>
       </div>
