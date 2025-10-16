@@ -122,10 +122,13 @@ export function Home() {
                 <PhoneMockup>
                   <div className="h-full w-full bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center p-6">
                     {/* TestFlight Icon */}
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-xl mb-4">
-                      <svg className="w-14 h-14 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-xl mb-4 relative overflow-hidden">
+                      {/* TestFlight Plane Icon */}
+                      <svg className="w-16 h-16 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.56 3.44c-.59-.59-1.54-.59-2.12 0L15 6.89 8.85 5.27l-1.42 1.42 4.24 2.83-4.24 4.24-2.83-.71-1.06 1.06 2.83 2.12 2.12 2.83 1.06-1.06-.71-2.83 4.24-4.24 2.83 4.24 1.42-1.42-1.62-6.15 3.44-3.44c.59-.59.59-1.54 0-2.12z"/>
                       </svg>
+                      {/* Orange accent dot */}
+                      <div className="absolute top-2 right-2 w-3 h-3 bg-orange-400 rounded-full"></div>
                     </div>
 
                     <h3 className="text-xl font-bold text-gray-900 mb-2">TestFlight Beta</h3>
