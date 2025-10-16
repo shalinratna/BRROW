@@ -3,8 +3,6 @@ import { useState } from 'react';
 import {
   NewspaperIcon,
   CubeIcon,
-  SwatchIcon,
-  DocumentTextIcon,
   EnvelopeIcon,
   UserIcon,
   BuildingOfficeIcon,
@@ -22,24 +20,6 @@ export function Press() {
     organization: '',
     message: '',
   });
-
-  const brandAssets = [
-    {
-      icon: CubeIcon,
-      title: 'Logo Package',
-      description: 'High-resolution logos in PNG, SVG, and vector formats for print and digital use.',
-    },
-    {
-      icon: SwatchIcon,
-      title: 'Brand Colors',
-      description: 'Primary: #2563eb (Blue-600), Secondary: #1e40af (Blue-700), Accent colors and gradients.',
-    },
-    {
-      icon: DocumentTextIcon,
-      title: 'Brand Guidelines',
-      description: 'Typography, voice & tone, usage guidelines, and visual identity standards.',
-    },
-  ];
 
   const keyFacts = [
     { label: 'Low 5% Fee', value: 'Keep 95% of every transaction' },
@@ -105,7 +85,7 @@ export function Press() {
               <span className="text-sm font-semibold">Press & Media</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Tell Our Story
+              The Brrow Story
             </h1>
             <p className="text-xl text-primary-100 leading-relaxed">
               Resources, assets, and information for journalists, bloggers, and media professionals
@@ -115,45 +95,8 @@ export function Press() {
         </div>
       </div>
 
-      {/* Media Kit Section */}
       <div className="section-padding">
         <div className="container-custom max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-20"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-              Media Kit
-            </h2>
-            <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              Download our brand assets and guidelines to accurately represent Brrow in your coverage.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {brandAssets.map((asset, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <asset.icon className="w-12 h-12 text-primary-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{asset.title}</h3>
-                  <p className="text-gray-600">{asset.description}</p>
-                </motion.div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <button className="px-8 py-4 bg-primary-600 text-white rounded-xl font-bold text-lg hover:bg-primary-700 transform hover:scale-105 transition-all shadow-lg">
-                Download Media Kit
-              </button>
-            </div>
-          </motion.div>
-
           {/* Founder Story */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
