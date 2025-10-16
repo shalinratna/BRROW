@@ -108,69 +108,46 @@ export function Home() {
               </div>
             </motion.div>
 
-            {/* Right - TestFlight Download */}
+            {/* Right - TestFlight in iPhone */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative flex justify-center items-center"
+              className="relative flex justify-center"
             >
               <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative"
               >
-                {/* Large Download Card */}
-                <div className="bg-white rounded-3xl p-12 shadow-2xl max-w-md">
-                  <div className="text-center space-y-6">
+                <PhoneMockup>
+                  <div className="h-full w-full bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center p-6">
                     {/* TestFlight Icon */}
-                    <div className="mx-auto w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-xl">
-                      <svg className="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-xl mb-4">
+                      <svg className="w-14 h-14 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
                       </svg>
                     </div>
 
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Download Beta</h3>
-                      <p className="text-gray-600">Available on TestFlight</p>
-                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">TestFlight Beta</h3>
+                    <p className="text-sm text-gray-600 mb-6 text-center">Join the beta program</p>
 
                     <a
                       href="https://testflight.apple.com/join/P1akbT8z"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block"
+                      className="w-full px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-bold text-sm hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg text-center"
                     >
-                      <button className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-bold text-lg hover:from-primary-700 hover:to-primary-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                        Join Beta Program
-                      </button>
+                      Download Beta
                     </a>
 
-                    <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1 text-xs text-gray-500 mt-4">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
                       </svg>
-                      <span>iOS Only (For Now)</span>
+                      <span>iOS Only</span>
                     </div>
                   </div>
-                </div>
-
-                {/* Floating Elements */}
-                <motion.div
-                  animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-6 -right-6 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-3xl">🚀</span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute -bottom-6 -left-6 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-3xl">⚡</span>
-                </motion.div>
+                </PhoneMockup>
               </motion.div>
             </motion.div>
           </div>
@@ -250,15 +227,45 @@ export function Home() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <div className="flex justify-center mb-6">
-                <PhoneMockup>
-                  <div className="w-full h-full bg-white flex flex-col items-center justify-center p-8">
-                    <div className="text-6xl mb-4">📍</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Search Locally</h3>
-                    <p className="text-sm text-gray-600">GPS-powered search finds items near you</p>
+              <PhoneMockup>
+                <div className="h-full w-full bg-white flex flex-col">
+                  {/* Status Bar */}
+                  <div className="flex items-center justify-between px-4 py-2 text-xs">
+                    <span className="font-semibold">9:41</span>
+                    <div className="flex gap-1 items-center">
+                      <span>📶</span>
+                      <span>🔋</span>
+                    </div>
                   </div>
-                </PhoneMockup>
-              </div>
+
+                  {/* Main Content */}
+                  <div className="flex-1 flex flex-col items-center justify-center px-6">
+                    <div className="text-6xl mb-4">📍</div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Search Locally</h3>
+                    <p className="text-xs text-gray-600 text-center">GPS-powered search finds items near you</p>
+                  </div>
+
+                  {/* Bottom Navigation */}
+                  <div className="flex items-center justify-around px-4 py-3 border-t border-gray-200">
+                    <div className="flex flex-col items-center gap-1">
+                      <span className="text-base">🏠</span>
+                      <span className="text-[10px] text-primary-600 font-semibold">Home</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">🔍</span>
+                      <span className="text-[10px] text-gray-500">Browse</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">💬</span>
+                      <span className="text-[10px] text-gray-500">Messages</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">👤</span>
+                      <span className="text-[10px] text-gray-500">Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </PhoneMockup>
             </motion.div>
 
             {/* Book Instantly */}
@@ -269,15 +276,45 @@ export function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
             >
-              <div className="flex justify-center mb-6">
-                <PhoneMockup>
-                  <div className="w-full h-full bg-white flex flex-col items-center justify-center p-8">
-                    <div className="text-6xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Book Instantly</h3>
-                    <p className="text-sm text-gray-600">Secure checkout in seconds</p>
+              <PhoneMockup>
+                <div className="h-full w-full bg-white flex flex-col">
+                  {/* Status Bar */}
+                  <div className="flex items-center justify-between px-4 py-2 text-xs">
+                    <span className="font-semibold">9:41</span>
+                    <div className="flex gap-1 items-center">
+                      <span>📶</span>
+                      <span>🔋</span>
+                    </div>
                   </div>
-                </PhoneMockup>
-              </div>
+
+                  {/* Main Content */}
+                  <div className="flex-1 flex flex-col items-center justify-center px-6">
+                    <div className="text-6xl mb-4">⚡</div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Book Instantly</h3>
+                    <p className="text-xs text-gray-600 text-center">Secure checkout in seconds</p>
+                  </div>
+
+                  {/* Bottom Navigation */}
+                  <div className="flex items-center justify-around px-4 py-3 border-t border-gray-200">
+                    <div className="flex flex-col items-center gap-1">
+                      <span className="text-base">🏠</span>
+                      <span className="text-[10px] text-primary-600 font-semibold">Home</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">🔍</span>
+                      <span className="text-[10px] text-gray-500">Browse</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">💬</span>
+                      <span className="text-[10px] text-gray-500">Messages</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">👤</span>
+                      <span className="text-[10px] text-gray-500">Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </PhoneMockup>
             </motion.div>
 
             {/* Chat In-App */}
@@ -288,15 +325,45 @@ export function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
             >
-              <div className="flex justify-center mb-6">
-                <PhoneMockup>
-                  <div className="w-full h-full bg-white flex flex-col items-center justify-center p-8">
-                    <div className="text-6xl mb-4">💬</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Chat In-App</h3>
-                    <p className="text-sm text-gray-600">Message lenders directly</p>
+              <PhoneMockup>
+                <div className="h-full w-full bg-white flex flex-col">
+                  {/* Status Bar */}
+                  <div className="flex items-center justify-between px-4 py-2 text-xs">
+                    <span className="font-semibold">9:41</span>
+                    <div className="flex gap-1 items-center">
+                      <span>📶</span>
+                      <span>🔋</span>
+                    </div>
                   </div>
-                </PhoneMockup>
-              </div>
+
+                  {/* Main Content */}
+                  <div className="flex-1 flex flex-col items-center justify-center px-6">
+                    <div className="text-6xl mb-4">💬</div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Chat In-App</h3>
+                    <p className="text-xs text-gray-600 text-center">Message lenders directly</p>
+                  </div>
+
+                  {/* Bottom Navigation */}
+                  <div className="flex items-center justify-around px-4 py-3 border-t border-gray-200">
+                    <div className="flex flex-col items-center gap-1">
+                      <span className="text-base">🏠</span>
+                      <span className="text-[10px] text-primary-600 font-semibold">Home</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">🔍</span>
+                      <span className="text-[10px] text-gray-500">Browse</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">💬</span>
+                      <span className="text-[10px] text-gray-500">Messages</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 opacity-40">
+                      <span className="text-base">👤</span>
+                      <span className="text-[10px] text-gray-500">Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </PhoneMockup>
             </motion.div>
           </div>
         </div>

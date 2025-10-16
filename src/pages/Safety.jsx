@@ -479,20 +479,28 @@ export function Safety() {
               Join our TestFlight beta and be part of building the safest peer-to-peer marketplace for your community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-shadow"
+              <a
+                href="https://testflight.apple.com/join/P1akbT8z"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Join TestFlight Beta
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold text-lg border-2 border-white/30 hover:bg-white/20 transition-colors"
-              >
-                Learn More
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-shadow"
+                >
+                  Join TestFlight Beta
+                </motion.button>
+              </a>
+              <a href="/help">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold text-lg border-2 border-white/30 hover:bg-white/20 transition-colors"
+                >
+                  Learn More
+                </motion.button>
+              </a>
             </div>
           </motion.div>
         </div>
