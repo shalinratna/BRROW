@@ -11,6 +11,8 @@ import {
   ChartBarIcon,
 } from '@heroicons/react/24/outline';
 
+const BACKEND_URL = 'https://brrow-backend-production.up.railway.app';
+
 export function Collaborate() {
   const [formState, setFormState] = useState({
     name: '',
@@ -97,7 +99,7 @@ export function Collaborate() {
     setSubmitStatus('sending');
 
     try {
-      const response = await fetch('https://formspree.io/f/mdknoqap', {
+      const response = await fetch(`${BACKEND_URL}/api/partnerships/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -108,10 +110,13 @@ export function Collaborate() {
           organization: formState.organization,
           partnershipType: formState.partnershipType,
           message: formState.message,
+          honeypot: formState.honeypot,
         }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
         setSubmitStatus('success');
         setFormState({
           name: '',

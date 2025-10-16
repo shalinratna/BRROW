@@ -323,7 +323,7 @@ export function Community() {
               Download the iOS beta on TestFlight and start connecting with your neighbors.
               Be part of the sharing economy revolution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="https://testflight.apple.com/join/P1akbT8z"
                 target="_blank"
@@ -332,11 +332,6 @@ export function Community() {
               >
                 Download iOS Beta
               </a>
-              <Link to="/waitlist">
-                <button className="px-8 py-4 bg-primary-800 text-white rounded-xl font-bold text-lg border-2 border-primary-600 hover:bg-primary-900 transform hover:scale-105 transition-all">
-                  Join Waitlist
-                </button>
-              </Link>
             </div>
             <p className="mt-6 text-sm text-primary-200">
               Android version coming Q2 2026

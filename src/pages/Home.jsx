@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { WaitlistForm } from '../components/WaitlistForm';
 import { PhoneMockup } from '../components/PhoneMockup';
 import {
   RocketLaunchIcon,
@@ -70,36 +69,16 @@ export function Home() {
                 All from your phone. Coming soon to iOS & Android.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/waitlist" className="flex-1 sm:flex-initial">
-                  <button className="w-full px-8 py-4 bg-white text-primary-600 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
-                    <BellAlertIcon className="w-5 h-5" />
-                    Join Waitlist
-                  </button>
-                </Link>
+              <div className="flex justify-center">
                 <a
                   href="https://testflight.apple.com/join/P1akbT8z"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial"
                 >
-                  <button className="w-full px-8 py-4 bg-primary-800 text-white rounded-xl font-bold text-lg border-2 border-primary-600 hover:bg-primary-900 transform hover:scale-105 transition-all duration-300">
+                  <button className="px-12 py-5 bg-white text-primary-600 rounded-xl font-bold text-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl">
                     Download iOS Beta
                   </button>
                 </a>
-              </div>
-
-              {/* Waitlist Stats */}
-              <div className="flex items-center gap-8 pt-4">
-                <div>
-                  <div className="text-3xl font-bold">20+</div>
-                  <div className="text-sm text-primary-200">On Waitlist</div>
-                </div>
-                <div className="w-px h-12 bg-primary-400"></div>
-                <div>
-                  <div className="text-3xl font-bold">Bay Area</div>
-                  <div className="text-sm text-primary-200">Launching First</div>
-                </div>
               </div>
             </motion.div>
 
@@ -398,32 +377,6 @@ export function Home() {
         </div>
       </div>
 
-      {/* Be the First to Know - Waitlist Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Be the First to Know
-              </h2>
-              <p className="text-xl text-gray-600">
-                Join the waitlist and be among the first to access Brrow when we launch.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <WaitlistForm source="homepage" />
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Launch Timeline */}
       <div className="py-20 bg-gradient-to-br from-primary-50 to-white">
         <div className="container-custom">
@@ -470,7 +423,7 @@ export function Home() {
                   </div>
                   <div className="flex-1 pt-3">
                     <h3 className="text-xl font-bold text-gray-900">Beta Testing - In Progress</h3>
-                    <p className="text-gray-600">Waitlist members will get early access</p>
+                    <p className="text-gray-600">TestFlight beta program currently active</p>
                     <span className="inline-block mt-2 px-3 py-1 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full">
                       78% Complete
                     </span>
@@ -514,18 +467,13 @@ export function Home() {
           >
             <RocketLaunchIcon className="w-16 h-16 mx-auto mb-6 text-primary-400" />
             <h2 className="text-5xl font-black mb-6">
-              Don't Miss the Launch
+              Try Brrow Today
             </h2>
             <p className="text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Join the waitlist today and be among the first to experience Brrow.
+              Join our iOS beta program via TestFlight and help shape the future of peer-to-peer rentals.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/waitlist">
-                <button className="px-12 py-5 bg-primary-600 text-white rounded-xl font-bold text-xl hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-xl">
-                  Join the Waitlist
-                </button>
-              </Link>
+            <div className="flex justify-center">
               <a
                 href="https://testflight.apple.com/join/P1akbT8z"
                 target="_blank"
@@ -538,7 +486,7 @@ export function Home() {
             </div>
 
             <div className="mt-8 text-primary-300">
-              20+ people already waiting • Q1 2026 Launch
+              Q1 2026 Public Launch • iOS & Android
             </div>
           </motion.div>
         </div>

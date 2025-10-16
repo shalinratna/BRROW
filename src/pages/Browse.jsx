@@ -8,7 +8,6 @@ import {
   StarIcon,
   HeartIcon,
   RocketLaunchIcon,
-  BellAlertIcon,
 } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 
@@ -240,7 +239,7 @@ export function Browse() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col md:flex-row items-center justify-between gap-4"
+            className="flex flex-col md:flex-row items-center justify-center gap-4"
           >
             <div className="flex items-center gap-3">
               <RocketLaunchIcon className="w-6 h-6" />
@@ -251,12 +250,15 @@ export function Browse() {
                 </p>
               </div>
             </div>
-            <Link to="/waitlist">
+            <a
+              href="https://testflight.apple.com/join/P1akbT8z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="flex items-center gap-2 px-6 py-3 bg-white text-orange-600 rounded-lg font-bold hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg whitespace-nowrap">
-                <BellAlertIcon className="w-5 h-5" />
-                Join Waitlist
+                Download iOS Beta
               </button>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -457,25 +459,23 @@ export function Browse() {
           className="mt-16 bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-12 text-center text-white"
         >
           <RocketLaunchIcon className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h2 className="text-3xl font-bold mb-4">Ready to Rent or Earn?</h2>
+          <h2 className="text-3xl font-bold mb-4">Try Brrow Today</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Join the waitlist now and be among the first to rent and earn when our mobile app launches in Q1 2026!
+            Join our iOS beta program via TestFlight and start connecting with your neighbors today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/waitlist" className="flex-1 sm:flex-initial">
-              <button className="w-full px-10 py-4 bg-white text-primary-600 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2">
-                <BellAlertIcon className="w-6 h-6" />
-                Join Waitlist
+          <div className="flex justify-center">
+            <a
+              href="https://testflight.apple.com/join/P1akbT8z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="px-10 py-4 bg-white text-primary-600 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl">
+                Download iOS Beta
               </button>
-            </Link>
-            <Link to="/list-item" className="flex-1 sm:flex-initial">
-              <button className="w-full px-10 py-4 bg-primary-800 text-white rounded-xl font-bold text-lg border-2 border-primary-600 hover:bg-primary-900 transform hover:scale-105 transition-all">
-                List for Launch
-              </button>
-            </Link>
+            </a>
           </div>
           <p className="mt-6 text-sm text-primary-200">
-            20+ people already on the waitlist • iOS & Android
+            Q1 2026 Public Launch • iOS & Android
           </p>
         </motion.div>
       </div>
@@ -588,14 +588,9 @@ export function Browse() {
 
               {/* App Download CTA */}
               <div className="mt-6 p-4 bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl border border-primary-200">
-                <p className="text-sm text-gray-700 mb-2">
-                  <span className="font-semibold">App Preview:</span> Full booking available in the mobile app launching Q1 2026
+                <p className="text-sm text-gray-700">
+                  <span className="font-semibold">App Preview:</span> Full booking available in the mobile app launching Q1 2026. Join our iOS beta via TestFlight today!
                 </p>
-                <Link to="/waitlist">
-                  <button className="text-sm text-primary-600 font-semibold hover:underline">
-                    Join waitlist →
-                  </button>
-                </Link>
               </div>
             </div>
           </motion.div>

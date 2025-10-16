@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, BellAlertIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Button } from './Button';
 
 export function Header() {
@@ -12,6 +12,7 @@ export function Header() {
     { name: 'Browse Items', href: '/browse' },
     { name: 'Safety', href: '/safety' },
     { name: 'Help', href: '/help' },
+    { name: 'Status', href: '/status' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -47,24 +48,21 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
-            <Link to="/list-item">
-              <Button variant="outline" size="sm" className="flex items-center gap-2">
-                <RocketLaunchIcon className="w-4 h-4" />
-                List for Launch
-              </Button>
-            </Link>
-            <Link to="/waitlist">
+          {/* Desktop CTA Button */}
+          <div className="hidden md:flex items-center">
+            <a
+              href="https://testflight.apple.com/join/P1akbT8z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="primary"
                 size="sm"
-                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 flex items-center gap-2 shadow-lg"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 shadow-lg"
               >
-                <BellAlertIcon className="w-4 h-4" />
-                Join Waitlist
+                Download iOS Beta
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -98,23 +96,21 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3 border-t border-gray-200">
-                <Link to="/waitlist" onClick={() => setIsMenuOpen(false)}>
+              <div className="pt-4 border-t border-gray-200">
+                <a
+                  href="https://testflight.apple.com/join/P1akbT8z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <Button
                     variant="primary"
                     size="sm"
-                    className="w-full bg-gradient-to-r from-primary-600 to-primary-700 flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-primary-600 to-primary-700"
                   >
-                    <BellAlertIcon className="w-5 h-5" />
-                    Join Waitlist
+                    Download iOS Beta
                   </Button>
-                </Link>
-                <Link to="/list-item" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="outline" size="sm" className="w-full flex items-center justify-center gap-2">
-                    <RocketLaunchIcon className="w-5 h-5" />
-                    List for Launch
-                  </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
