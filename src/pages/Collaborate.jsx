@@ -62,20 +62,20 @@ export function Collaborate() {
     {
       icon: UserGroupIcon,
       title: 'Growing Community',
-      stat: '1,000+',
+      stat: '10+',
       description: 'Active users in the Bay Area',
     },
     {
       icon: ChartBarIcon,
       title: 'High Engagement',
-      stat: '85%',
+      stat: '92%',
       description: 'Monthly active user rate',
     },
     {
       icon: CurrencyDollarIcon,
       title: 'Transaction Volume',
-      stat: '$50K+',
-      description: 'In monthly peer-to-peer transactions',
+      stat: '$250K+',
+      description: 'In applied Brrow technology through Shaiitech',
     },
     {
       icon: CheckCircleIcon,
