@@ -345,12 +345,23 @@ export function Press() {
               </form>
 
               <div className="mt-8 text-center text-primary-100">
-                <p className="text-sm">
-                  You can also reach us directly at{' '}
-                  <a href="mailto:press@brrowapp.com" className="underline font-semibold text-white hover:text-primary-200">
-                    press@brrowapp.com
-                  </a>
-                </p>
+                <p className="text-sm mb-3">You can also reach us directly:</p>
+                <div className="space-y-2">
+                  <div>
+                    <span className="text-xs text-primary-200">Media & Press Inquiries:</span>
+                    <br />
+                    <a href="mailto:press@brrowapp.com" className="underline font-semibold text-white hover:text-primary-200">
+                      press@brrowapp.com
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-xs text-primary-200">Partnership Opportunities:</span>
+                    <br />
+                    <a href="mailto:partnerships@brrowapp.com" className="underline font-semibold text-white hover:text-primary-200">
+                      partnerships@brrowapp.com
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
