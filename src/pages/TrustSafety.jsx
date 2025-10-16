@@ -565,7 +565,7 @@ export function TrustSafety() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">Appeal Process</h3>
             <p className="text-gray-700">
               If you believe your account was suspended or banned in error, you may appeal by contacting
-              support@brrow.com within 14 days with relevant evidence. Appeals are reviewed within 5-7
+              support@brrowapp.com within 14 days with relevant evidence. Appeals are reviewed within 5-7
               business days.
             </p>
           </motion.div>
@@ -601,7 +601,7 @@ export function TrustSafety() {
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">Report via Email</h3>
-                <p className="text-xl font-bold mb-1">safety@brrow.com</p>
+                <p className="text-xl font-bold mb-1">support@brrowapp.com</p>
                 <p className="text-sm text-red-100">Response within 1 hour</p>
               </div>
             </div>
@@ -653,7 +653,7 @@ export function TrustSafety() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:support@brrow.com"
+                href="mailto:support@brrowapp.com"
                 className="px-8 py-4 bg-primary-600 text-white rounded-xl font-bold text-lg hover:bg-primary-700 transform hover:scale-105 transition-all shadow-lg"
               >
                 Contact Support

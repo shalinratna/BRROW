@@ -27,7 +27,7 @@ export function Press() {
     { label: 'Insurance Program', value: 'Optional coverage for high-value listings' },
     { label: 'Platform Types', value: 'Buy, Sell, Lend, and Giveaway marketplace' },
     { label: 'Location', value: 'Bay Area, California' },
-    { label: 'Founded', value: '2024 by SJSU student' },
+    { label: 'Founded', value: 'June 2025 by SJSU student' },
     { label: 'Mission', value: 'Help people save money through sharing' },
     { label: 'Verification', value: 'ID and phone verification for all users' },
   ];
@@ -127,7 +127,7 @@ export function Press() {
                     or camping gear that sits unused most of the year—there had to be a better way.
                   </p>
                   <p>
-                    Founded in 2024 and based in the Bay Area, Brrow was built with a clear mission:
+                    Founded in June 2025 and based in the Bay Area, Brrow was built with a clear mission:
                     <span className="font-bold text-primary-700"> help people save money through sharing.</span> The
                     platform enables users to buy, sell, lend, and give away items within their local communities,
                     all while being protected by a secure escrow system and optional insurance coverage.
@@ -347,8 +347,8 @@ export function Press() {
               <div className="mt-8 text-center text-primary-100">
                 <p className="text-sm">
                   You can also reach us directly at{' '}
-                  <a href="mailto:press@brrow.com" className="underline font-semibold text-white hover:text-primary-200">
-                    press@brrow.com
+                  <a href="mailto:press@brrowapp.com" className="underline font-semibold text-white hover:text-primary-200">
+                    press@brrowapp.com
                   </a>
                 </p>
               </div>

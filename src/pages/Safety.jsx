@@ -435,6 +435,72 @@ export function Safety() {
         </div>
       </section>
 
+      {/* Official Communication Security Notice */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-8 md:p-12 border-2 border-amber-300">
+              <div className="flex items-start gap-6">
+                <div className="bg-amber-600 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <ShieldCheckIcon className="h-9 w-9 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Verify Official Brrow Communications
+                  </h2>
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Protect yourself from phishing and scams. All official Brrow emails will <span className="font-bold">only</span> come from these addresses:
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="bg-white rounded-lg p-4 border border-amber-200">
+                      <div className="flex items-center gap-3">
+                        <CheckCircleIcon className="h-6 w-6 text-green-600 flex-shrink-0" />
+                        <div>
+                          <p className="font-bold text-gray-900">noreply@brrowapp.com</p>
+                          <p className="text-sm text-gray-600">Automated notifications and updates</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 border border-amber-200">
+                      <div className="flex items-center gap-3">
+                        <CheckCircleIcon className="h-6 w-6 text-green-600 flex-shrink-0" />
+                        <div>
+                          <p className="font-bold text-gray-900">support@brrowapp.com</p>
+                          <p className="text-sm text-gray-600">Customer support and assistance</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 mb-6">
+                    <div className="flex items-start gap-3">
+                      <ExclamationTriangleIcon className="h-6 w-6 text-red-600 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-bold text-red-900 mb-1">Brrow will NEVER ask for your password</p>
+                        <p className="text-sm text-red-800">If anyone claiming to be from Brrow asks for your password, it's a scam. Report it immediately.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold text-gray-900 mb-2">How to Get Support</h4>
+                    <ul className="text-gray-700 text-sm space-y-2 list-disc list-inside">
+                      <li>Email us at <span className="font-semibold">support@brrowapp.com</span></li>
+                      <li>Use the in-app support chat (fastest response)</li>
+                      <li>Submit a help request through your account settings</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Safety Checklists */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
