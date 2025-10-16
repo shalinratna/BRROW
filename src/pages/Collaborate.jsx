@@ -382,19 +382,75 @@ export function Collaborate() {
             </div>
           </motion.div>
 
+          {/* Powered by Shaiitech Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mt-20 mb-20"
+          >
+            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 rounded-3xl p-12 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiLz48L2c+PC9zdmc+')] opacity-20"></div>
+
+              <div className="relative z-10 text-center">
+                <div className="inline-block px-4 py-2 bg-white/20 rounded-full mb-6">
+                  <span className="text-sm font-semibold">Enterprise Technology</span>
+                </div>
+                <h2 className="text-4xl font-bold mb-6">Built with Confidence</h2>
+                <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                  Brrow is proudly powered by <span className="font-bold text-white">Shaiitech</span>, leveraging
+                  cutting-edge systems to deliver a seamless, secure, and lightning-fast experience.
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="text-3xl mb-3">⚡</div>
+                    <h3 className="font-bold mb-2">Warrior Technology</h3>
+                    <p className="text-sm text-blue-100">Advanced infrastructure for real-time transactions</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="text-3xl mb-3">🛡️</div>
+                    <h3 className="font-bold mb-2">BlackboxZ1 Security</h3>
+                    <p className="text-sm text-blue-100">Military-grade encryption and fraud prevention</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="text-3xl mb-3">🚀</div>
+                    <h3 className="font-bold mb-2">Warthog R4 Engine</h3>
+                    <p className="text-sm text-blue-100">High-performance backend built to scale</p>
+                  </div>
+                </div>
+
+                <div className="border-t border-white/20 pt-8">
+                  <p className="text-blue-100 mb-4">
+                    Interested in getting your own app built with the same enterprise-grade technology?
+                  </p>
+                  <a
+                    href="https://shaiitech.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-8 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition-all transform hover:scale-105 shadow-xl"
+                  >
+                    Explore Shaiitech Solutions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Additional CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mt-20 bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-12 text-center text-white"
+            className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-12 text-center text-white"
           >
             <h2 className="text-3xl font-bold mb-4">Have Questions?</h2>
             <p className="text-xl text-primary-100 mb-6 max-w-2xl mx-auto">
               Reach out to our partnerships team at{' '}
-              <a href="mailto:partnerships@brrow.com" className="underline font-semibold">
-                partnerships@brrow.com
+              <a href="mailto:partnerships@brrowapp.com" className="underline font-semibold">
+                partnerships@brrowapp.com
               </a>
             </p>
             <p className="text-primary-200">

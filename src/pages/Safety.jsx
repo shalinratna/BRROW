@@ -317,8 +317,77 @@ export function Safety() {
         </div>
       </section>
 
-      {/* Report Suspicious Activity */}
+      {/* Enterprise Security Technology */}
       <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiLz48L2c+PC9zdmc+')] opacity-10"></div>
+
+              <div className="relative z-10">
+                <div className="text-center mb-8">
+                  <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-4">
+                    <span className="text-sm font-semibold">Powered by Shaiitech</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    Enterprise-Grade Security Infrastructure
+                  </h2>
+                  <p className="text-lg text-slate-200 max-w-3xl mx-auto">
+                    Brrow leverages cutting-edge Shaiitech technology systems to deliver military-grade security and lightning-fast performance.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <span className="text-xl">⚡</span>
+                      </div>
+                      <h3 className="font-bold text-lg">Warrior Technology</h3>
+                    </div>
+                    <p className="text-sm text-slate-300">
+                      Real-time transaction processing with advanced infrastructure for seamless performance.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <span className="text-xl">🛡️</span>
+                      </div>
+                      <h3 className="font-bold text-lg">BlackboxZ1 Security</h3>
+                    </div>
+                    <p className="text-sm text-slate-300">
+                      Military-grade encryption and fraud prevention protecting every transaction.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <span className="text-xl">🚀</span>
+                      </div>
+                      <h3 className="font-bold text-lg">Warthog R4 Engine</h3>
+                    </div>
+                    <p className="text-sm text-slate-300">
+                      High-performance backend architecture built to scale with your community.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Report Suspicious Activity */}
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
