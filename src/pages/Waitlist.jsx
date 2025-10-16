@@ -18,7 +18,7 @@ export function Waitlist() {
     {
       icon: <GiftIcon className="w-8 h-8" />,
       title: 'Exclusive Perks',
-      description: 'Early adopters get $50 in rental credits',
+      description: 'Early adopters get special benefits and recognition',
     },
     {
       icon: <SparklesIcon className="w-8 h-8" />,
@@ -60,18 +60,13 @@ export function Waitlist() {
 
             <div className="flex items-center justify-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-4xl font-bold">9,237</div>
+                <div className="text-4xl font-bold">20+</div>
                 <div className="text-sm text-primary-200">On Waitlist</div>
               </div>
               <div className="w-px h-12 bg-primary-400"></div>
               <div className="text-center">
                 <div className="text-4xl font-bold">Q1 2026</div>
                 <div className="text-sm text-primary-200">Est. Launch</div>
-              </div>
-              <div className="w-px h-12 bg-primary-400"></div>
-              <div className="text-center">
-                <div className="text-4xl font-bold">$50</div>
-                <div className="text-sm text-primary-200">Free Credits</div>
               </div>
             </div>
           </motion.div>
@@ -223,11 +218,11 @@ export function Waitlist() {
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
-                What are the $50 in rental credits?
+                How do I know when the app is ready?
               </h3>
               <p className="text-gray-600">
-                Every waitlist member who signs up before launch gets $50 in free rental credits
-                to use within the first 30 days. That's 2-3 free rentals on us!
+                Waitlist members will receive an email notification as soon as the app launches.
+                You'll also get early access to beta testing opportunities.
               </p>
             </div>
 
@@ -258,7 +253,7 @@ export function Waitlist() {
             Spots are filling up fast. Join the waitlist now and be part of the sharing economy revolution.
           </p>
           <div className="text-2xl font-bold mb-2">
-            9,237 people waiting
+            20+ people waiting
           </div>
           <div className="text-primary-200">
             Will you be next?

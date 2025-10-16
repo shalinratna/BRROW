@@ -92,18 +92,13 @@ export function Home() {
               {/* Waitlist Stats */}
               <div className="flex items-center gap-8 pt-4">
                 <div>
-                  <div className="text-3xl font-bold">9,237</div>
+                  <div className="text-3xl font-bold">20+</div>
                   <div className="text-sm text-primary-200">On Waitlist</div>
                 </div>
                 <div className="w-px h-12 bg-primary-400"></div>
                 <div>
-                  <div className="text-3xl font-bold">100k+</div>
-                  <div className="text-sm text-primary-200">Items Ready</div>
-                </div>
-                <div className="w-px h-12 bg-primary-400"></div>
-                <div>
-                  <div className="text-3xl font-bold">$50</div>
-                  <div className="text-sm text-primary-200">Free Credits</div>
+                  <div className="text-3xl font-bold">Bay Area</div>
+                  <div className="text-sm text-primary-200">Launching First</div>
                 </div>
               </div>
             </motion.div>
@@ -418,7 +413,7 @@ export function Home() {
                 Be the First to Know
               </h2>
               <p className="text-xl text-gray-600">
-                Join 9,000+ people on the waitlist. Get $50 in free rental credits at launch.
+                Join the waitlist and be among the first to access Brrow when we launch.
               </p>
             </div>
 
@@ -522,7 +517,7 @@ export function Home() {
               Don't Miss the Launch
             </h2>
             <p className="text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Join the waitlist today and get $50 in free rental credits when we launch.
+              Join the waitlist today and be among the first to experience Brrow.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -543,7 +538,7 @@ export function Home() {
             </div>
 
             <div className="mt-8 text-primary-300">
-              9,237 people already waiting • Q1 2026 Launch
+              20+ people already waiting • Q1 2026 Launch
             </div>
           </motion.div>
         </div>
