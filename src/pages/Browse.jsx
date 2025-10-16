@@ -18,6 +18,7 @@ export function Browse() {
   const [priceRange, setPriceRange] = useState('all');
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const categories = [
     'All Categories',
@@ -413,7 +414,10 @@ export function Browse() {
                         </span>
                         <span className="text-sm text-gray-500">/{item.period}</span>
                       </div>
-                      <button className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-primary-600 transition-colors">
+                      <button
+                        onClick={() => setSelectedItem(item)}
+                        className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-primary-600 transition-colors"
+                      >
                         View
                       </button>
                     </div>
@@ -455,7 +459,7 @@ export function Browse() {
           <RocketLaunchIcon className="w-16 h-16 mx-auto mb-6 text-primary-200" />
           <h2 className="text-3xl font-bold mb-4">Ready to Rent or Earn?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Join the waitlist now and get <span className="font-bold text-white">$50 in free rental credits</span> when our mobile app launches in Q1 2026!
+            Join the waitlist now and be among the first to rent and earn when our mobile app launches in Q1 2026!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/waitlist" className="flex-1 sm:flex-initial">
@@ -471,10 +475,132 @@ export function Browse() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-primary-200">
-            9,237 people already on the waitlist • iOS & Android
+            20+ people already on the waitlist • iOS & Android
           </p>
         </motion.div>
       </div>
+
+      {/* Item Detail Modal */}
+      {selectedItem && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedItem(null)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.2 }}
+            className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header Image */}
+            <div className="relative h-72 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center rounded-t-3xl">
+              <div className="text-9xl">{selectedItem.image}</div>
+              <button
+                onClick={() => setSelectedItem(null)}
+                className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
+              >
+                <span className="text-xl text-gray-600">×</span>
+              </button>
+              {!selectedItem.available && (
+                <div className="absolute top-4 left-4 px-4 py-2 bg-gray-900 text-white text-sm font-semibold rounded-full">
+                  Unavailable
+                </div>
+              )}
+            </div>
+
+            {/* Content */}
+            <div className="p-8">
+              {/* Title & Category */}
+              <div className="mb-6">
+                <span className="inline-block text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full mb-3">
+                  {selectedItem.category}
+                </span>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">{selectedItem.name}</h2>
+                <p className="text-gray-600">By {selectedItem.owner}</p>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="bg-gray-50 rounded-xl p-4 text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <StarIcon className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    <span className="text-xl font-bold text-gray-900">{selectedItem.rating}</span>
+                  </div>
+                  <p className="text-xs text-gray-600">{selectedItem.reviews} reviews</p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-4 text-center">
+                  <div className="text-xl font-bold text-gray-900 mb-1">${selectedItem.price}</div>
+                  <p className="text-xs text-gray-600">per {selectedItem.period}</p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-4 text-center">
+                  <MapPinIcon className="w-6 h-6 mx-auto text-primary-600 mb-1" />
+                  <p className="text-xs text-gray-600">Nearby</p>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">Location</h3>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <MapPinIcon className="w-4 h-4" />
+                  <span>{selectedItem.location}</span>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">Description</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  This {selectedItem.name.toLowerCase()} is available for rent in {selectedItem.location}.
+                  Perfect for your {selectedItem.category.toLowerCase()} needs. Well-maintained and ready to use.
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="space-y-3">
+                <button className="w-full px-6 py-4 bg-primary-600 text-white rounded-xl font-bold text-lg hover:bg-primary-700 transition-colors shadow-lg">
+                  Request to Rent
+                </button>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    onClick={() => toggleFavorite(selectedItem.id)}
+                    className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+                  >
+                    {favorites.includes(selectedItem.id) ? (
+                      <>
+                        <HeartIconSolid className="w-5 h-5 text-red-500" />
+                        Saved
+                      </>
+                    ) : (
+                      <>
+                        <HeartIcon className="w-5 h-5" />
+                        Save
+                      </>
+                    )}
+                  </button>
+                  <button className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors">
+                    Message Owner
+                  </button>
+                </div>
+              </div>
+
+              {/* App Download CTA */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl border border-primary-200">
+                <p className="text-sm text-gray-700 mb-2">
+                  <span className="font-semibold">App Preview:</span> Full booking available in the mobile app launching Q1 2026
+                </p>
+                <Link to="/waitlist">
+                  <button className="text-sm text-primary-600 font-semibold hover:underline">
+                    Join waitlist →
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }
