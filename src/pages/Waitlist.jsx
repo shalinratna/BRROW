@@ -33,33 +33,8 @@ export function Waitlist() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    try {
-      const response = await fetch(`${BACKEND_URL}/api/waitlist/signup`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSuccess(true);
-        setWaitlistCount(data.count);
-        setName('');
-        setEmail('');
-      } else {
-        setError(data.error || 'Something went wrong. Please try again.');
-      }
-    } catch (err) {
-      setError('Network error. Please check your connection and try again.');
-    } finally {
-      setLoading(false);
-    }
+    // Redirect to TestFlight instead of collecting signups
+    window.location.href = 'https://testflight.apple.com/join/P1akbT8z';
   };
 
   const shareUrl = 'https://brrowapp.com/waitlist';
