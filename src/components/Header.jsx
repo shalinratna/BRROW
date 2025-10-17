@@ -12,7 +12,6 @@ export function Header() {
     { name: 'Browse Items', href: '/browse' },
     { name: 'Safety', href: '/safety' },
     { name: 'Help', href: '/help' },
-    { name: 'Status', href: '/status' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -48,8 +47,16 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center">
+          {/* Desktop CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Link to="/status">
+              <Button
+                variant="outline"
+                size="sm"
+              >
+                Status
+              </Button>
+            </Link>
             <a
               href="https://testflight.apple.com/join/P1akbT8z"
               target="_blank"
@@ -96,7 +103,16 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 space-y-3 border-t border-gray-200">
+                <Link to="/status" onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                  >
+                    Status
+                  </Button>
+                </Link>
                 <a
                   href="https://testflight.apple.com/join/P1akbT8z"
                   target="_blank"
